@@ -1,0 +1,15 @@
+<html>
+    <head>
+		<title>Roles</title>
+    </head>
+    <body>
+    <h2>Liste des roles</h2>
+    <ul>
+        {% for role in roles %}
+            <li>{{ role.label }} <a clas="edit_picto" href="{{ path('editRole', {'id': role.id}) }}">EDIT</a> | <a class="delete_picto" href="{{ path('deleteRole', {'id': role.id}) }}">DELETE</a></li>
+        {% endfor %}
+    </ul>
+    
+    <a clas="new_picto" href="{{ path('newRole')}}">New role</a>
+    </body>
+</html>
